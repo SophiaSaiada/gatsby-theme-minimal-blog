@@ -4,6 +4,7 @@ type Props = {
   site: {
     siteMetadata: {
       siteTitle: string
+      siteTitleEn: string
       siteTitleAlt: string
       siteHeadline: string
       siteUrl: string
@@ -29,6 +30,7 @@ const useSiteMetadata = () => {
       site {
         siteMetadata {
           siteTitle
+          siteTitleEn
           siteTitleAlt
           siteHeadline
           siteUrl
