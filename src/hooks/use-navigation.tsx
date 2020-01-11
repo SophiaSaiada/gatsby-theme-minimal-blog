@@ -17,7 +17,10 @@ const useNavigation = () => {
       site {
         siteMetadata {
           navigation {
-            title
+            title {
+              he
+              en
+            }
             slug
           }
         }
