@@ -26,30 +26,37 @@ type Props = {
 
 const useSiteMetadata = () => {
   const data = useStaticQuery<Props>(graphql`
-    query {
-      site {
-        siteMetadata {
-          siteTitle
-          siteTitleEn
-          siteTitleAlt
-          siteHeadline
-          siteUrl
-          siteDescription
-          siteLanguage
-          siteImage
-          author
-          externalLinks {
-            name
-            url
-          }
-          tagsPath
-          basePath
-          blogPath
-          showLineNumbers
-        }
+{
+  site {
+    siteMetadata {
+      siteTitle
+      siteTitleEn
+      siteTitleAlt
+      siteHeadline
+      siteUrl
+      siteDescription
+      siteLanguage
+      siteImage
+      author
+      externalLinks {
+        name
+        url
+      }
+      tagsPath
+      basePath
+      blogPath
+      showLineNumbers
+      projects {
+        name
+        description
+        url
+        tags
+        stars
       }
     }
-  `)
+  }
+}
+`)
 
   return data.site.siteMetadata
 }
