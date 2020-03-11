@@ -29,6 +29,7 @@ const SEO = ({ title, description, pathname, image, children }: Props) => {
     siteLanguage,
     siteImage: defaultImage,
     author,
+    keywords,
   } = site
 
   const seo = {
@@ -41,6 +42,7 @@ const SEO = ({ title, description, pathname, image, children }: Props) => {
     <Helmet title={title} defaultTitle={defaultTitle} titleTemplate={`%s | ${siteTitle}`}>
       <html lang={siteLanguage} />
       <meta name="description" content={seo.description} />
+      <meta name="keywords" content={keywords} />
       <meta name="image" content={seo.image} />
       <meta property="og:title" content={seo.title} />
       <meta property="og:url" content={seo.url} />
